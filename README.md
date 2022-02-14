@@ -1,4 +1,4 @@
-**Website**: https://cliphd.ga
+**Website**: https://swade.ga
 
 ### FAQ
 * **What do you use to host? Is it free?**
