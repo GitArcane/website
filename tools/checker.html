@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html>
+<head>
+    </div>
+  </form>
 	<link rel="icon" href="assets\images\favicon.ico">
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3230534145137287"
      crossorigin="anonymous"></script>
@@ -16,7 +18,7 @@
         <meta property="twitter:image" content="https://i.imgur.com/0bcCmOg.gif">
         <meta name="theme-color" content="#2f3136">
         <link rel="stylesheet" href="assets/css/main.css">
-    </head>
+</head>
     <body>
         <main>
             <script>
@@ -45,39 +47,50 @@
             </video>
             <section class="fullscreen text-content">
             </div>
-            <div id="center">
-                <h1 style="font-family: derk; text-shadow: 0 0 0.40em #bababa;">Swade</h1>
-                <div class="socials">
-                        >
-                <a href="https://tiktok.com/@swade_mcmiller" style="text-decoration:none; font-family: derk; font-size: 1em;">tiktok</a>
-                    </span>
-                    <span>
-                        >
-                <a href="https://instagram.com/swade_mcmiller" style="text-decoration:none; font-family: derk; font-size: 1em;">instagram</a>
-                    </span>
-                    <span>
-                        >
-                <a href="https://twitter.com/swade_mcmiller" style="text-decoration:none; font-family: derk; font-size: 1em;">twitter</a>
-                   <span>
-                        >
-                <a href="https://github.com/swademcmiller" style="text-decoration:none; font-family: derk; font-size: 1em;">github</a>
-                   <span>
-                        >
-                <a href="https://solo.to/swade" style="text-decoration:none; font-family: derk; font-size: 1em;">solo.to</a>
-                   <span>
-                        >
-                <a href="https://ogusers.com/malwxre" style="text-decoration:none; font-family: derk; font-size: 1em;">ogusers</a>
-                   <span>
-                   <span>
-                        >
-                <a href="unblockedgames.html" style="text-decoration:none; font-family: derk; font-size: 1.2em;">unblocked games</a>
-                   <span>
-                        >
-                <a href="howto.html" style="text-decoration:none; font-family: derk; font-size: 1.2em;">how to zoom in/out</a>
-                   <span>
-            </div>	
+  <div class="center-align">
 
-        </main>
+  <div id="header">
+    <a href="index.html" style="text-decoration: none;">
+      <h1>riphook.xyz</h1>
+    </a>
+	<h2>web-based discord multitool</h2>
+  </div>
+  
+  <div id="container">
     
+      <p style="font-family: Arial, Helvetica, sans-serif; color: #ffffff"></p><input type='text' id="token"
+        placeholder="Token" autocomplete="off">
+      <p>
+		<input type="submit" name="submit" value="Check" onclick="submit()">
+        <div id="response">
+            
+        </div>
+  </div>
+        <center>
+          <p id='log'></p>
+        </center>
+    </div>
+  </div>
+
+  <script>
+    function submit() {
+        var input = document.getElementById("token").value;
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://discordapp.com/api/users/@me', true);
+        xhr.setRequestHeader('Authorization', `${input}`)
+        xhr.onload = function () {
+            if (xhr.response == '{"message": "401: Unauthorized", "code": 0}') {
+                document.getElementById("response").innerHTML = "Status: Invalid"
+            }
+            else {
+                document.getElementById("response").innerHTML = "Status: Valid"
+            }
+        }
+        xhr.send();
+
+    }
+</script>
+  <script src="jquery.js"></script>
+  
 </body>
 </html>

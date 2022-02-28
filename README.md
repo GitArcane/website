@@ -1,6 +1,6 @@
 **Website**: https://swade.ga
 
-### FAQ
+FAQ
 * **What do you use to host? Is it free?**
 
 I use [netlify.com](https://netlify.com) to host and yes, it's free.
