@@ -1,0 +1,23 @@
+@font-face {
+  font-family: derk;
+  src: url(derk.otf);
+}
+  html {
+  font-family: mono;
+}
+body {
+background-color: black;
+}
+li:hover {
+    text-decoration: underline;
+    color: white;
+}
+li {
+    color: grey;
+    font-family: derk;
+    font-size: 1em;
+}
+h1 {
+    color: white;
+    font-family: monospace;
+}
