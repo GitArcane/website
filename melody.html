@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>Shiftyyy#7966</title>
+<link rel="icon" href="assets\images\favicon.ico">
+<link rel="stylesheet" href="assets/css/melody.css">
+<script type="text/javascript">
+//<![CDATA[
+
+(function(){
+ 
+AudioHandler = function(audioElement)
+{
+  this.trackElement = undefined;
+  this.audioElement = audioElement;
+  
+  var self = this;
+  document.addEventListener
+  (
+      'click', 
+       function(evt) 
+       { 
+           self.play(evt.target);           
+       }, 
+       false 
+  );
+  this.audioElement.addEventListener
+  (
+      'ended', 
+      function() 
+      { 
+          self.play(self.trackElement.nextElementSibling);  
+      }, 
+      true
+  );
+    
+};
+AudioHandler.prototype.play = function(trackElement)
+{
+  if (!trackElement || trackElement.tagName.toLowerCase() != 'li') return;  
+  this.trackElement = trackElement;
+  
+  this.audioElement.src = 'mp3/' + this.toEscapedASCII(trackElement.textContent) + '.mp3';
+  this.audioElement.play();
+           
+  var lis = document.getElementsByTagName('li');
+  
+  for (var i = 0, l = lis.length ; i < l ; i++)
+  {
+          lis[i].className = '';
+  }
+           
+  trackElement.className = 'playing';            
+};
+
+AudioHandler.prototype.toEscapedASCII = function(str)
+{
+    var arr = [];
+    
+    for (var c = '', i = 0, l = str.length ; i < l ; i++)
+    {
+        c = str.charAt(i);
+        
+        switch (c)
+        {
+            case 'Ø': arr.push('O'); break;
+            case 'ö': arr.push('o'); break;
+            case '#': arr.push('%23'); break;
+            default:  arr.push(c); break;
+        }
+    }
+
+    return arr.join('');
+};
+
+window.onload = function() 
+{ 
+    new AudioHandler(document.getElementsByTagName('audio')[0]);    
+}
+
+})();
+// ]]>
+</script>
+
+<style type="text/css">
+ul { -webkit-column-count:2;-moz-column-count:2;column-count:2; }
+li:hover { text-decoration: underline; }
+li.playing { font-weight: bold; }
+</style>
+</head>
+
+
+<body>
+<h1 style="font-family: derk; text-shadow: 0 0 0.40em #bababa; text-align: center;">Melody Music Player</h1>
+
+<audio style="margin: 0 auto; display: block;" controls="controls" 
+ onerror="alert('Could not play MP3 audio file ' + this.src + '!');">
+HTML5 MP3 audio required 
+</audio>
+
+<ul>
+<li>01. The Race - Tay K</li>
+<li>02. Murder She Wrote - Tay K</li>
+<li>03. I Love My Choppa - Tay K</li>
+<li>04. XO TOUR LIF3 - UZI</li>
+<li>05. Revenge - XXX</li>
+<li>06. Fuck Love - XXX</li>
+<li>07. Look at Me - XXX</li>
+<li>08. Myron</li>
+<li>09. Through Da Storm - Polo G</li>
+<li>10. </li>
+<li>11. </li>
+<li>12. </li>
+<li>13. </li>
+<li>14. </li>
+<li>15. </li>
+<li>16. </li>
+<li>17. </li>
+<li>18. </li>
+<li>19. </li>
+<li>20. </li>
+<li>21. </li>
+<li>22. </li>
+<li>23. </li>
+<li>24. </li>
+<li>25. </li>
+<li>26. </li>
+<li>27. </li>
+<li>28. </li>
+<li>29. </li>
+<li>30. </li>
+<li>31. </li>
+<li>32. </li>
+<li>33. </li>
+<li>34. </li>
+<li>35. </li>
+<li>36. </li>
+<li>37. </li>
+<li>38. </li>
+<li>39. </li>
+<li>40. </li>
+<li>41. </li>
+<li>42. </li>
+<li>43. </li>
+<li>44. </li>
+<li>45. </li>
+<li>46. </li>
+<li>47. </li>
+<li>48. </li>
+<li>49. </li>
+<li>50. </li>
+<li>51. </li>
+<li>52. </li>
+<li>53. </li>
+<li>54. </li>
+<li>55. </li>
+<li>56. </li>
+</ul>
+</body>
+</html>
