@@ -6,7 +6,9 @@
   font-family: mono;
 }
 body {
-background-color: black;
+	background-color: black;
+	overflow:scroll;
+	overflow-x:hidden;
 }
 li:hover {
     text-decoration: underline;
@@ -15,9 +17,48 @@ li:hover {
 li {
     color: grey;
     font-family: derk;
-    font-size: 1em;
+    font-size: 14px;
 }
 h1 {
     color: white;
     font-family: monospace;
+}
+audio {
+    width: 76%;
+    height: 54px;
+    margin-bottom: 33px;
+    margin-left: 55px;
+}
+        #footer {
+            position: fixed;
+            padding: 10px 10px 10px 10px;
+            bottom: 0;
+            width: 110%;
+            /* Height of the footer*/ 
+            height: 128px;
+            background: white;
+	    margin-top: 500px;
+	    margin: 0;
+        }
+.clear { 
+clear: both; 
+height: 128px;
+ }
+audio::-webkit-media-controls-panel {
+  background-color: white;
+}
+ul {
+width: 500px;
+}
+.center {
+margin: auto;
+width: 60%;
+margin-top: 50px;
+}
+nav {
+    position: sticky; top: 0;
+}
+body nav {
+  position: sticky;
+  top: 0;
 }
